@@ -1,0 +1,16 @@
+body {
+    /* 是 body 的原因是部分设置是对于整个页面（body）的，而不是每个 element */
+    text-align: center;
+    font-family: '更纱黑体 SC', 'HarmonyOS Sans SC', 'Microsoft YaHei UI', 'PingFang SC';
+    margin: 30px;
+    background-color: #b3d0d0;
+}
+
+#cur-circle {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 50%;
+    position: fixed;
+}
