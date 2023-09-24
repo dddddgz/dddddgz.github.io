@@ -14,3 +14,46 @@ body {
     opacity: 50%;
     position: fixed;
 }
+
+#settings {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #000;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+#settings .container {
+    margin: 10px;
+}
+
+.option {
+    text-align: left;
+}
+
+.enabled, .disabled {
+    width: 50px;
+    height: 20px;
+    display: inline-block;
+}
+
+.enabled:hover, .disabled:hover {
+    cursor: pointer;
+}
+
+.enabled {
+    background-color: blue;
+}
+
+.enabled:active {
+    background-color: darkblue;
+}
+
+.disabled {
+    background-color: gray;
+}
+
+.disabled:active {
+    background-color: lightgray;
+}
