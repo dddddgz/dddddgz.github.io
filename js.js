@@ -1,8 +1,10 @@
-function show_inputer(element) {
+function show_inputer(element, text) {
     // 显示打字机特效
-    let text = element.innerText;
     element.innerText = "";
-    for (let subscript = 1; subscript <= text.length; subscript += 1) {
-        setTimeout(function () { element.innerText = text.slice(0, subscript) }, subscript * 60);
+    for (let subscript = 0; subscript < text.length; subscript += 1) {
+        setTimeout(function () {
+            element.innerText = text.slice(0, subscript);
+            if (subscript % 2 == text.length % 2) element.innerText += "|";
+        }, (subscript + 1) * 70);
     }
 }

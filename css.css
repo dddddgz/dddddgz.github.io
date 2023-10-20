@@ -3,5 +3,14 @@ body {
     text-align: center;
     font-family: '更纱黑体 SC', 'Microsoft YaHei UI', 'PingFang SC';
     margin: 30px;
-    background-color: #b3d0d0;
+    background-color: skyblue;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+::selection {
+    background-color: #7e57c2;
+    color: white;
 }
