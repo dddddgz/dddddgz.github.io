@@ -1,59 +1,7 @@
 body {
     /* 是 body 的原因是部分设置是对于整个页面（body）的，而不是每个 element */
     text-align: center;
-    font-family: '更纱黑体 SC', 'HarmonyOS Sans SC', 'Microsoft YaHei UI', 'PingFang SC';
+    font-family: '更纱黑体 SC', 'Microsoft YaHei UI', 'PingFang SC';
     margin: 30px;
     background-color: #b3d0d0;
-}
-
-#cur-circle {
-    width: 200px;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 50%;
-    opacity: 50%;
-    position: fixed;
-}
-
-#settings {
-    width: 200px;
-    height: 300px;
-    border: 1px solid #000;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-}
-
-#settings .container {
-    margin: 10px;
-}
-
-.option {
-    text-align: left;
-}
-
-.enabled, .disabled {
-    width: 50px;
-    height: 20px;
-    display: inline-block;
-}
-
-.enabled:hover, .disabled:hover {
-    cursor: pointer;
-}
-
-.enabled {
-    background-color: blue;
-}
-
-.enabled:active {
-    background-color: darkblue;
-}
-
-.disabled {
-    background-color: gray;
-}
-
-.disabled:active {
-    background-color: lightgray;
 }
