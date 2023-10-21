@@ -15,20 +15,21 @@ h1 {
     color: white;
 }
 
-div.button-container {
+.button-container {
     width: 300px;
     height: 120px;
     border-radius: 15px;
     background-color: darkblue;
     cursor: pointer;
     transition: background-color 1s;
+    color: white;
 }
 
-div.button-container:hover {
+.button-container:hover {
     background-color: blue;
 }
 
-div.button-container a {
+.button-container a {
     line-height: 120px;
     font-size: 30px;
 }
