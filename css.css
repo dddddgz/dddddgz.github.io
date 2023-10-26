@@ -3,7 +3,7 @@ body {
     text-align: center;
     font-family: '更纱黑体 SC', 'Microsoft YaHei UI', 'PingFang SC';
     margin: 30px;
-    background-color: #87ceeb;
+    background-color: skyblue;
 }
 
 h1 {
@@ -12,7 +12,7 @@ h1 {
 
 ::selection {
     background-color: #1e90ff;
-    color: #fff;
+    color: white;
 }
 
 .button-container {
@@ -22,17 +22,17 @@ h1 {
     background-color: #00008b;
     cursor: pointer;
     transition: background-color 1s;
-    color: #fff;
+    color: white;
 }
 
 .button-container:hover {
-    background-color: #00f;
+    background-color: blue;
 }
 
 .button-container a {
     line-height: 120px;
     font-size: 30px;
-    color: #fff;
+    color: white;
 }
 
 a {
@@ -40,6 +40,12 @@ a {
     color: #369;
 }
 
-p {
+blockquote {
+    background-color: lightgray;
+    padding: 20px;
+}
 
+var {
+    background-color: darkgray;
+    color: blue;
 }
