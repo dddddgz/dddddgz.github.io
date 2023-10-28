@@ -15,24 +15,28 @@ h1 {
     color: white;
 }
 
-.button-container {
-    width: 300px;
-    height: 120px;
-    border-radius: 15px;
-    background-color: #00008b;
-    cursor: pointer;
-    transition: background-color 1s;
-    color: white;
-}
-
-.button-container:hover {
-    background-color: blue;
+.button-container
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .button-container a {
+    width: 300px;
+    height: 120px;
+    border-radius: 15px;
+    margin: 2px;
+    background-color: #00008b;
+    cursor: pointer;
+    transition: background-color 1s;
     line-height: 120px;
     font-size: 30px;
     color: white;
+}
+
+.button-container a:hover {
+    background-color: blue;
 }
 
 a {
