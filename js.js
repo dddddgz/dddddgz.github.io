@@ -8,3 +8,12 @@ function show_inputer(element, text) {
         }, (subscript + 1) * 70);
     }
 }
+
+function check_link() {
+    // 处理链接
+    let elements = document.getElementsByTagName("a");
+    for (let i = 0; i < elements.length; i += 1) {
+        let element = elements[i];
+        element.innerText += " (" + element.innerText.split("/")[2] + ")";
+    }
+}
