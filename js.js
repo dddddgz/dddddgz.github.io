@@ -14,6 +14,6 @@ function check_link() {
     let elements = document.getElementsByTagName("a");
     for (let i = 0; i < elements.length; i += 1) {
         let element = elements[i];
-        element.innerText += " (" + element.innerText.split("/")[2] + ")";
+        element.innerText += " (" + element.getAttribute("href").split("/")[2] + ")";
     }
 }
