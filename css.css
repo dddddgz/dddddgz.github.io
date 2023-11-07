@@ -1,13 +1,16 @@
 body {
     /* 是 body 的原因是部分设置是对于整个页面（body）的，而不是每个 element */
     text-align: center;
-    font-family: '更纱黑体 SC', 'Microsoft YaHei UI', 'PingFang SC';
+    font-family: 'Microsoft YaHei UI', 'PingFang SC';
     margin: 30px;
     background-color: skyblue;
+    background-image: url('1.png');
+    background-size: cover;
 }
 
 h1 {
     font-size: 80px;
+    color: white;
 }
 
 ::selection {
