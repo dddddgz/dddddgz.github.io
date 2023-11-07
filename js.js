@@ -5,6 +5,6 @@ function show_typewriter(element, text) {
         setTimeout(function () {
             element.innerText = text.slice(0, subscript);
             if (subscript % 2 != text.length % 2) element.innerText += "|";
-        }, (subscript + 1) * 70);
+        }, (subscript + 1) * 50);
     }
 }
