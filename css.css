@@ -3,9 +3,8 @@ body {
     text-align: center;
     font-family: 'Microsoft YaHei UI', 'PingFang SC';
     margin: 30px;
-    background-image: url('1.png');
+    background-image: url('1.jpg');
     background-size: cover;
-    color: white;
 }
 
 h1 {
