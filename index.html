@@ -8,8 +8,19 @@
     <base href="." target="_blank">
   </head>
   <body>
-    <!-- <h1 id="title"></h1>
-    <p id="ian"></p>
+    <div class="menubar">
+      <img class="icon" src="images/home.png">
+      &nbsp;&nbsp;
+      <span id="accounts">
+        <img class="item-icon" src="images/account.png">
+        <span class="item">社交帐号</span>
+        <ul class="subitem">
+          <li>123</li>
+        </ul>
+      </span>
+    </div>
+    <h1 id="title"></h1>
+    <!-- <p id="ian"></p>
     <p>
       社交账号：
       &nbsp;&nbsp;
@@ -38,20 +49,21 @@
       &nbsp;&nbsp;
       <a href="https://fishc.com.cn" title="鱼C论坛"><img class="small" src="https://fishc.com.cn/favicon.ico"></a>
     </p> -->
-    <p>site updateing.</p>
     <script src="js.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-    <!-- <script>
-      $.ajax({
-        type: 'GET',
-        url: 'https://api.vvhan.com/api/ian?cl=wx&type=json',
-        success: function(data) {
-          if (data.success) {
-            show_typewriter(document.getElementById("ian"), `${data.data.vhan}——${data.data.creator}《${data.data.source}》`)
-          }
-        }
-      })
+    <script>
+      // $.ajax({
+      //   type: 'GET',
+      //   url: 'https://api.vvhan.com/api/ian?cl=wx&type=json',
+      //   success: function(data) {
+      //     if (data.success) {
+      //       show_typewriter(document.getElementById("ian"), `${data.data.vhan}——${data.data.creator}《${data.data.source}》`)
+      //     }
+      //   }
+      // })
+      document.getElementsByClassName("menubar")[0].getElementsByClassName("icon")[0].
+        setAttribute("onclick", "window.location.href = 'https://dddddgz.github.io'");
       show_typewriter(document.getElementById("title"), "dddddgz > Homepage");
-    </script> -->
+    </script>
   </body>
 </html>

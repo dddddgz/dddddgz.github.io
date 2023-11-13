@@ -36,10 +36,62 @@ var {
 }
 
 .small {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
 }
 
 #ian {
     font-size: 20px;
+}
+
+.menubar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: '更纱黑体 SC', '微软雅黑';
+    font-style: bold;
+    height: 30px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+
+.menubar .icon {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.menubar .icon, .menubar .item-icon, .menubar .item {
+    cursor: pointer;
+}
+
+.menubar .item-icon {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.menubar .subitem {
+    display: none;
+}
+
+#accounts:hover .subitem {
+    display: block;
+}
+
+#accounts .subitem {
+    list-style-type: none;
+    text-align: left;
+    background-color: antiquewhite;
+    color: lightgray;
+    width: 50px;
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 6px;
 }
