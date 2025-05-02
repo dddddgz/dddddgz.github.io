@@ -44,7 +44,7 @@
             </div>
             <br>
             <button class="btn btn-success" onclick="func()">测关系</button>
-            <br>
+            <br><br>
             <p id="result">快来测一测吧！</p>
         </div>
         <script src="https://fastly.jsdelivr.net/npm/cnchar/cnchar.min.js"></script>
@@ -56,7 +56,7 @@
                 if (t1 && t2) {
                     let a = cnchar.stroke(t1);
                     let b = cnchar.stroke(t2);
-                    let c = (a - b) % 26;
+                    let c = Math.abs(a - b) % 26;
                     let arr = ['两人的关系形影相随、亲密无间', '与对方一直相伴老去', '两人处于势不两立的关系', '知音挚友', '意中人', '帮助你办事的人', '你的贵人', '表面和气心里矛盾的两个人', '异常的异性关系', '一拍即合', '两人的关系很一般', '很敬仰你', '很稀罕你', '契合你的人', '说你是非的人', '天敌', '救星', '忠诚的人', '居心回测的人', '暗恋你的人', '矢志不移', '情敌', '听命于你的人', '始终在一起', '相伴一生', '又恨又爱'];
                     result.innerHTML = arr[c];
                 } else {
