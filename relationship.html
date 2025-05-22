@@ -3,56 +3,36 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <title>dddddgz 的个人网站_关系测试</title>
-        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
         <style>
-            body {
-                background-color: lightcyan;
+            #yzaqsm {
+                /* 宇宙安全声明 */
+                font-weight: bold;
             }
-            #main {
-                margin: 20px;
-            }
-            </style>
+        </style>
     </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">dddddgz 的个人网站</a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto"> 
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">主页</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/relationship.html">关系测试</a>
-                        </li> 
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <body class="notready">
+        <div id="navbar"></div>
         <div id="main">
-            <p>测试结果仅供娱乐，因测试结果而产生的任何纠纷，本站概不负责！</p>
-            <div class="input-group">
-                <span class="input-group-text">名字 1:</span>
-                <input type="text" class="form-control" id="name1">
-            </div>
+            <p id="yzaqsm">测试结果仅供娱乐，因测试结果而产生的任何纠纷，本站概不负责！</p>
+            名字 1
+            <input type="text" id="name1">
             <br>
-            <div class="input-group">
-                <span class="input-group-text">名字 2:</span>
-                <input type="text" class="form-control" id="name2">
-            </div>
+            名字 2
+            <input type="text" id="name2">
             <br>
-            <button class="btn btn-success" onclick="func()">测关系</button>
-            <br><br>
+            <button onclick="func()">测关系</button>
+            <br>
             <p id="result">快来测一测吧！</p>
         </div>
+        <script src="main.js"></script>
         <script src="https://fastly.jsdelivr.net/npm/cnchar/cnchar.min.js"></script>
         <script>
             function func() {
-                let result = document.getElementById('result');
-                let t1 = document.getElementById('name1').value;
-                let t2 = document.getElementById('name2').value;
+                let result = $('#result');
+                let t1 = $('#name1').value;
+                let t2 = $('#name2').value;
                 if (t1 && t2) {
                     let a = cnchar.stroke(t1);
                     let b = cnchar.stroke(t2);
