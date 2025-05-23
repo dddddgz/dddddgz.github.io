@@ -26,12 +26,15 @@ function addToNavbar(text, url) {
 // 添加导航栏标题
 navbar.appendChild(newElement('<a class="title" href="/">dddddgz 的个人网站</a>'));
 addToNavbar('主页', '/');
-addToNavbar('关系测试（未完工）', '/relationship.html');
 addToNavbar('友情链接', '/friendlink.html');
+addToNavbar('关系测试（未完工）', '/relationship.html');
+addToNavbar('拼音工具', '/pinintool.html');
 addToNavbar('↗ View on GitHub', 'https://github.com/dddddgz/dddddgz.github.io');
 addToNavbar('↗ FishC 账号', 'https://fishc.com.cn/space-uid-1518166.html');
 
 // 接下来的都是处理编写 HTML 时简化的部分
+// 加上备案
+$('#main').appendChild(newElement('<a href="https://icp.gov.moe/?keyword=20255504" target="_blank">萌ICP备20255504号</a>'));
 // 使鼠标悬浮在链接上时显示链接真实地址
 $all('a').forEach(element => {
     if ((href = element.getAttribute('href')) && href.startsWith('https://')) {
@@ -39,9 +42,15 @@ $all('a').forEach(element => {
         element.setAttribute('title', href);
     }
 });
-// 处理简化的链接（<fcthread>、<fcuser>）
-$all('fcthread').forEach(element => {
-    let url = `https://fishc.com.cn/thread-${element.getAttribute('tid')}-1-1.html`;
+// 处理简化的链接（<fcpost>、<fcuser>）
+$all('fcpost').forEach(element => {
+    let url, tid = element.getAttribute('tid');
+    if (pid = element.getAttribute('pid')) {
+        // 指定了具体帖子，而不是仅仅一个主题
+        url = `https://fishc.com.cn/forum.php?mod=redirect&goto=findpost&ptid=${tid}&pid=${pid}`;
+    } else {
+        url = `https://fishc.com.cn/thread-${tid}-1-1.html`;
+    }
     element.setAttribute('onclick', `window.location.href = '${url}';`);
     element.setAttribute('title', `FishC 论坛的帖子（${url}）`);
 });

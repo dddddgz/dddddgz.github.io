@@ -49,7 +49,15 @@ h2 {
     font-weight: normal;
 }
 
-a, fcthread, fcuser {
+table thead {
+    background-color: #aaa;
+}
+
+table tbody {
+    background-color: #ccc;
+}
+
+a, fcpost, fcuser {
     color: #369;
     text-decoration: underline;
     cursor: pointer;

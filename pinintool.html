@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <title>dddddgz 的个人网站_拼音工具</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            td {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div id="main">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>拼音字母 / 轻声</th>
+                        <th>阴平</th>
+                        <th>阳平</th>
+                        <th>上声</th>
+                        <th>去声</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>a</td>
+                        <td>ā</td>
+                        <td>á</td>
+                        <td>ǎ</td>
+                        <td>à</td>
+                    </tr>
+                    <tr>
+                        <td>o</td>
+                        <td>ō</td>
+                        <td>ó</td>
+                        <td>ǒ</td>
+                        <td>ò</td>
+                    </tr>
+                    <tr>
+                        <td>e</td>
+                        <td>ē</td>
+                        <td>é</td>
+                        <td>ě</td>
+                        <td>è</td>
+                    </tr>
+                    <tr>
+                        <td>i</td>
+                        <td>ī</td>
+                        <td>í</td>
+                        <td>ǐ</td>
+                        <td>ì</td>
+                    </tr>
+                    <tr>
+                        <td>u</td>
+                        <td>ū</td>
+                        <td>ú</td>
+                        <td>ǔ</td>
+                        <td>ù</td>
+                    </tr>
+                    <tr>
+                        <td>ü</td>
+                        <td>ǖ</td>
+                        <td>ǘ</td>
+                        <td>ǚ</td>
+                        <td>ǜ</td>
+                    </tr>
+                    <tr>
+                        <td>ê</td>
+                        <td>ê̄</td>
+                        <td>ế</td>
+                        <td>ê̌</td>
+                        <td>ề</td>
+                    </tr>
+                    <tr>
+                        <td>m</td>
+                        <td>m̄</td>
+                        <td>ḿ</td>
+                        <td>m̌</td>
+                        <td>m̀</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>n̄</td>
+                        <td>ń</td>
+                        <td>ň</td>
+                        <td>ǹ</td>
+                    </tr>
+                    <!-- <tr>
+                        <td>z</td>
+                        <td>z̄</td>
+                        <td>ź</td>
+                        <td>ž</td>
+                        <td>z̀</td>
+                    </tr>
+                    <tr>
+                        <td>c</td>
+                        <td>c̄</td>
+                        <td>ć</td>
+                        <td>č</td>
+                        <td>c̀</td>
+                    </tr>
+                    <tr>
+                        <td>s</td>
+                        <td>s̄</td>
+                        <td>ś</td>
+                        <td>š</td>
+                        <td>s̀</td>
+                    </tr>
+                    <tr>
+                        <td>r</td>
+                        <td>r̄</td>
+                        <td>ŕ</td>
+                        <td>ř</td>
+                        <td>r̀</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <script src="main.js"></script>
+        <script>
+            $all('td').forEach(element => {
+                element.setAttribute('title', '点击复制');
+                element.onclick = () => navigator.clipboard.writeText(element.innerHTML);
+            });
+        </script>
+    </body>
+</html>
