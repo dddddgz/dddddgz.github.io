@@ -70,7 +70,7 @@ a {
 
 .group {
     width: 300px;
-    height: 75%;
+    height: 100%;           /* 这个选项很玄学啊，不管设百分之多少都是恰好文字占满，不然就是所有 .group 和最高的那个一样高 */
     border: 1px #999 solid;
     background-color: #e0e0e0;
     transition: background-color 0.5s;
@@ -79,6 +79,20 @@ a {
 
 .group:hover {
     background-color: #d7f8e5;
+    animation: moveUp 0.2s;
+    top: -5px;
+}
+
+@keyframes moveUp {                     /* 上下弹跳 */
+    0% {
+        transform: translateY(0px);     /* 初始位置 */
+    }
+    50% {
+        transform: translateY(-5px);    /* 一半（0.1s）时到达最上面 */
+    }
+    100% {
+        transform: translateY(0px);     /* 回到初始位置 */
+    }
 }
 
 .group .title {

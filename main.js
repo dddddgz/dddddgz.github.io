@@ -27,8 +27,9 @@ function addToNavbar(text, url) {
 navbar.appendChild(newElement('<a class="title" href="/">dddddgz 的个人网站</a>'));
 addToNavbar('主页', '/');
 addToNavbar('关系测试（未完工）', '/relationship.html');
-addToNavbar('网站历史', '/history.html');
 addToNavbar('拼音工具', '/pinintool.html');
+addToNavbar('原创作品', '/zuopin.html');
+addToNavbar('网站历史', '/history.html');
 addToNavbar('友情链接', '/friendlink.html');
 addToNavbar('↗ Follow (GitHub)', 'https://github.com/dddddgz');
 addToNavbar('↗ FishC 账号', 'https://fishc.com.cn/space-uid-1518166.html');

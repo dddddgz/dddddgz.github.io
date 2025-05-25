@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <title>dddddgz 的个人网站_原创作品</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .box {
+                background-color: rgba(224, 224, 224, 0.7);
+                width: 90vw;    /* 宽度：90% 窗口宽度 */
+                height: 60px;   /* 高度：60px */
+                padding: 10px;  /* 边框内留白的宽度：10px */
+                display: flex;  /* 内部组件排列方式：横向 */
+                gap: 20px;      /* 组件间隔：20px */
+                cursor: pointer;
+                position: relative;
+                top: 0px;
+                transition: top 0.5s;
+            }
+            
+            .box:hover {
+                top: -5px;
+            }
+
+            .title {
+                line-height: 10px;
+            }
+
+            .content {
+                font-size: small;
+                color: #808080;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div id="main">
+            <div class="box" href="https://github.com/dddddgz/doublepinyin">
+                <div><img width="50" src="github.png"></div>
+                <div>
+                    <p class="title">DoublePinyin Trainer / 双拼练习器</p>
+                    <p class="content">用于练习双拼的 Python 程序，基于 ttkbootstrap，首次提交在 2025/4/3。</p>
+                </div>
+            </div><br>
+            <div class="box" href="https://github.com/dddddgz/bbcodemarkdownconverter">
+                <div><img width="50" src="github.png"></div>
+                <div>
+                    <p class="title">BBCode / Markdown Converter</p>
+                    <p class="content">一个为了方便 BBCode 和 Markdown 进行转换而设计的一个程序</p>
+                </div>
+            </div>
+        </div>
+        <div id="icp"></div>
+        <script src="main.js"></script>
+        <script>
+            $all('#main > div.box').forEach(element => {
+                element.setAttribute('onclick', `window.open('${href = element.getAttribute('href')}')`);
+                element.setAttribute('title', href);
+            });
+        </script>
+    </body>
+</html>
