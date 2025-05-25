@@ -6,15 +6,27 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="style.css">
         <style>
+            table {
+                border-bottom: 1px solid #000;
+                border-right: 1px solid #000;
+            }
+            th, td {
+                border-top: 1px solid #000;
+                border-left: 1px solid #000;
+            }
             td {
                 cursor: pointer;
+                transition: background-color 0.5s;
+            }
+            td:hover {
+                background-color: #aaa;
             }
         </style>
     </head>
     <body>
         <div id="navbar"></div>
         <div id="main">
-            <table border="1">
+            <table cellspacing="0">
                 <thead>
                     <tr>
                         <th>拼音字母 / 轻声</th>
@@ -119,6 +131,7 @@
                 </tbody>
             </table>
         </div>
+        <div id="icp"></div>
         <script src="main.js"></script>
         <script>
             $all('td').forEach(element => {

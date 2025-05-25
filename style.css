@@ -1,7 +1,12 @@
 body {
     /* 使用系统默认字体 */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: linear-gradient(#a7ebac, #afece3);
+    background: linear-gradient(#c6efc8, #b2e4ed);
+}
+
+::selection {
+    color: #fff;
+    background-color: #1aca99;
 }
 
 #navbar {
@@ -13,11 +18,6 @@ body {
     width: 100vw;
     padding: 10px 0px;
     background: linear-gradient(#2a961e, #0c6f30);
-}
-
-#navbar .title {
-    /* 导航栏最左边的标题 */
-    font-weight: bold;
 }
 
 #navbar a {
@@ -49,15 +49,20 @@ h2 {
     font-weight: normal;
 }
 
-table thead {
+thead {
     background-color: #aaa;
 }
 
-table tbody {
+tbody {
     background-color: #ccc;
 }
 
-a, fcpost, fcuser {
+th, td {
+    font-size: large;
+    padding: 5px;
+}
+
+a {
     color: #369;
     text-decoration: underline;
     cursor: pointer;
@@ -65,10 +70,11 @@ a, fcpost, fcuser {
 
 .group {
     width: 300px;
-    height: 600px;
+    height: 75%;
     border: 1px #999 solid;
     background-color: #e0e0e0;
     transition: background-color 0.5s;
+    border-radius: 10px;    /* 边缘有 10px 是弧线 */
 }
 
 .group:hover {
@@ -77,15 +83,46 @@ a, fcpost, fcuser {
 
 .group .title {
     padding: 5px;
+    border-radius: 10px;
     background: linear-gradient(#ddd, #ccc);
-    font-weight: bold;
 }
 
-.group ul li {
+.group ul li, .group p, #note { /* 这些地方就不太适合默认行高 */
     line-height: 25px;
 }
 
 .group p {
     padding: 0px 10px;
-    line-height: 25px;
+}
+
+.box {
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-weight: bold;
+}
+
+#note {
+    position: absolute;         /* 这个位置刚好是备案信息的上面 */
+    left: 0px;
+    bottom: 60px;
+}
+
+#icp {
+    position: absolute;         /* 备案信息左下角对准窗口左下角 */
+    left: 0px;
+    bottom: 0px;
+    width: 100vw;               /* 横向撑满窗口 */
+    background-color: #333;
+    color: #fff;
+    font-size: x-large;
+    text-align: center;         /* 文字居中对齐 */
+}
+
+#icp a {
+    line-height: 60px;          /* 设置这个直接让备案信息纵向居中对齐 */
+    color: #fff;
+    font-weight: bold;
 }

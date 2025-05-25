@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <title>dddddgz 的个人网站_网站历史</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #main {
+                position: absolute;
+                left: 20%;                  /* 左边占 20% */
+                top: 60px;                  /* 上面 60px */
+                width: 60%;                 /* 右边剩 20% */
+                height: calc(100% - 180px); /* 下面留 180px */
+            }
+            
+            #line {
+                /* 那条线 */
+                position: absolute;
+                left: 50%;                  /* 居中对齐 */
+                height: calc(100% - 120px);
+                border-left: 3px solid #48cf87;
+                transition: border-left 0.5s;
+            }
+
+            #line:hover {
+                border-left: 3px solid #e3a961;
+            }
+
+            .container {
+                width: 50%;
+                height: 100%;
+            }
+
+            #main .box {
+                padding: 10px;  /* 文字周围的空白 */
+                position: relative;
+                left: 5%;       /* 左右各留出 5% */
+                width: 90%;     /* 宽度为 .container 的 90% */
+                transition: box-shadow 0.5s;
+                line-height: 10px;
+            }
+
+            #main .box p:not(.title) {
+                line-height: 20px;
+            }
+
+            #main .box:hover {
+                box-shadow: 0px 0px 10px rgba(227, 169, 97, 0.6);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div id="main" class="box">
+            <h1>网站历史</h1>
+            <div id="line"></div>
+            <div class="container">
+                <div class="box">
+                    <p class="title">202X/X/X</p>
+                    <p>网站创建又删除了不知道几次……</p>
+                </div><br>
+                <div class="box">
+                    <p class="title">2025/4/13</p>
+                    <p>最新版网站的初次提交，只有一个 index.html。</p>
+                </div><br>
+                <div class="box">
+                    <p class="title">2025/5/2</p>
+                    <p>采用 Bootstyle 样式，加入了“关系测试”页面。</p>
+                </div><br>
+                <div class="box">
+                    <p class="title">2025/5/2</p>
+                    <p>修复了“笔画差为负数”导致 undefined 的 bug。</p>
+                </div><br>
+                <div class="box">
+                    <p class="title">2025/5/22</p>
+                    <p>废除 Bootstyle 样式，采用自定义样式，添加了 404、友情链接等页面，关系测试页面设为“未完工”状态，主页采用 busuanzi 统计访问次数，添加自定义标签 &lt;fcthread&gt; &lt;fcpost&gt;。</p>
+                </div><br>
+                <div class="box">
+                    <p class="title">2025/5/23</p>
+                    <p>将 &lt;fcthread&gt; 更名为 &lt;fcpost&gt;，并增加其链接至具体回复帖子的功能；添加了备案；添加了拼音工具页面；废除 busuanzi，采用 counter12 统计访问次数。</p>
+                </div><br>
+                <div class="box">
+                    <p class="title">这块的显示位置不太对啊，容我花上一些时间改改……</p>
+                    <p></p>
+                </div><br>
+            </div>
+        </div>
+        <div id="icp"></div>
+        <script src="main.js"></script>
+    </body>
+</html>

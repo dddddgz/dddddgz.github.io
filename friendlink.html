@@ -8,6 +8,7 @@
         <style>
             #main {
                 display: flex;
+                gap: 10px;
             }
         </style>
     </head>
@@ -17,31 +18,52 @@
             <div class="group">
                 <div class="title">FishC 论坛</div>
                 <ul>
-                    <li>链接：<a href="https://fishc.com.cn">https://fishc.com.cn</a></li>
-                    <li>站长：小甲鱼</li>
-                    <li>开站时间：2010/5/20</li>
+                    <li>链接：<a>fishc.com.cn</a></li>
+                    <li>站长：<a uid=9>小甲鱼</a></li>
+                    <li>开站时间：2010/5/20<nt></nt></li>
                     <li>站点简介：</li>
                 </ul>
                 <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;FishC 论坛站长小甲鱼制作了<a href="https://ilovefishc.com/?page=timeline">大量编程教程</a>，并录制成视频发在 <a href="https://space.bilibili.com/314076440/">Bilibili</a> 上，赢得了大量编程学习者的支持，FishC 论坛因此有了大量用户。小甲鱼在 2023/2/25 成功获得 100W 粉丝，并获得清华大学出版社发来的贺报（<fcpost tid="224872">↗</fcpost>）。
+                    鱼C工作室成立于2010年5月，致力于提供优质、通俗易懂的编程教育。🎯 以“让编程更简单、更有趣”为宗旨，工作室通过原创教程、在线社区和开源项目，帮助编程爱好者快速入门并提升技能。📚 凭借幽默风趣的教学风格，鱼C工作室在业界广受认可，吸引了众多学习者。🚀 未来，我们将持续优化内容，推动技术分享，让更多人轻松学编程！💡<nt nid=1></nt>
                 </p>
                 <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;FishC 论坛的用户被称为“鱼油”，鱼油中像<fcuser uid="1276895">豆嘉木</fcuser>、<fcuser uid="912696">青出于蓝</fcuser>等大佬创造了多篇技术文章，获得了论坛许多鱼油的赞赏，并成功成为“精华帖”。
+                    <a href="https://space.bilibili.com/314076440">小甲鱼</a>在 2023/2/25 成功获得了 100W Bilibili 粉丝，并获得清华大学出版社发来的贺报<nt></nt>。
                 </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;FishC 论坛基于 Discuz! X，采用积分规则，通过签到等方法能获得鱼币，通过发表回复等方法能获得荣誉，回复他人求助帖并获得“最佳答案”能获得技术值。
-                </p>
+                <p>FishC 论坛基于 Discuz! X，采用积分规则，签到等能获得鱼币，发表回复等能获得荣誉，获得“最佳答案”能获得技术值。</p>
             </div>
             <div class="group">
                 <div class="title">琅琊阁</div>
                 <ul>
-                    <li>链接：<a href="https://langyawangchao.github.io">https://langyawangchao.github.io</a></li>
-                    <li>站长：琅琊王朝</li>
-                    <li>开站时间：2023/2/15</li>
+                    <li>链接：<a>langyawangchao.github.io</a></li>
+                    <li>站长：<a uid=1363874>琅琊王朝</a></li>
+                    <li>开站时间：2024/2/15 或 2023/10/11<nt></nt></li>
                     <li>站点简介：琅琊王朝的博客</li>
                 </ul>
             </div>
+            <div class="group">
+                <div class="title">Ben's Blog</div>
+                <ul>
+                    <li>链接：<a>loujunyi-blog.netlify.app</a></li>
+                    <li>站长：<a uid=1088826>学习编程中的Ben</a></li>
+                    <li>开站时间：2023/7/?<nt></nt></li>
+                    <li>站点简介：Ben 的博客</li>
+                </ul>
+            </div>
         </div>
+        <div id="note">
+            <ol>
+                <li><a href="https://ilovefishc.com/?page=timeline">FishC 发展历程</a></li>
+                <li><a tid=224872>「小甲鱼」B 站一夜破 100W 粉？！</a></li>
+                <li><a href="https://github.com/langyawangchao/langyawangchao.github.io/commits/main/">Commits</a>；<a href="https://langyawangchao.github.io/article.html">这里</a>说是 2023/10/11</i></li>
+                <li><a href="https://loujunyi-blog.netlify.app/archives/">来源</a>（也有可能是 6 月底）</li>
+            </ol>
+        </div>
+        <div id="icp"></div>
         <script src="main.js"></script>
+        <script>
+            $all('.group p').forEach(element => {
+                element.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;' + element.innerHTML;
+            });
+        </script>
     </body>
 </html>
