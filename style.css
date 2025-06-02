@@ -2,18 +2,26 @@ body {
     /* 使用系统默认字体 */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: linear-gradient(#c6efc8, #b2e4ed);
+    margin: 0px;    /* 不然在上下移动 body 时候边缘会留白，很不美观 */
+    animation: load 0.3s;
+}
+
+@keyframes load {   /* 通过动画来掩盖那一点点的 Javascript 延迟 */
+    0% {
+        opacity: 0.6;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 ::selection {
-    color: #fff;
-    background-color: #1aca99;
+    background-color: #5bbab8;
 }
 
 #navbar {
-    /* 左对齐 */
-    position: absolute;
-    left: 0px;
-    top: 0px;
     /* 横向占满整个屏幕 */
     width: 100vw;
     padding: 10px 0px;
@@ -29,11 +37,6 @@ body {
 }
 
 #main {
-    /* 因为上面设置了 position: absolute，所以必须再次下移下面的组件 */
-    position: absolute;
-    /* 让居中效果能顺利呈现 */
-    top: 40px;
-    left: 0px;
     width: calc(100vw - 20px);
     padding: 10px;
 }
@@ -62,9 +65,38 @@ th, td {
     padding: 5px;
 }
 
+p {
+    line-height: 25px;
+}
+
 a {
     color: #369;
-    text-decoration: underline;
+}
+
+button {
+    cursor: pointer;
+    background-color: #7ab1e7;
+    border: 0px;
+}
+
+input {
+    border: 1px solid #dfdfdf;
+    font-family: inherit;   /* 使用父元素的字体 */
+}
+
+button, input {
+    margin: 0px 8px;        /* 横向 margin，这样就有间隔了 */
+    font-size: inherit;     /* 使用父元素的字体大小，就是和 <p> 等元素一样的大小 */
+    outline: 0px solid #4e839d;
+    transition: outline 0.2s;
+    border-radius: 5px;
+}
+
+button:focus, input:focus {
+    outline: 4px solid #4e839d;
+}
+
+checkbox {
     cursor: pointer;
 }
 
@@ -101,17 +133,13 @@ a {
     background: linear-gradient(#ddd, #ccc);
 }
 
-.group ul li, .group p, #note { /* 这些地方就不太适合默认行高 */
-    line-height: 25px;
-}
-
 .group p {
     padding: 0px 10px;
 }
 
 .box {
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px #00000033;
 }
 
 .title {

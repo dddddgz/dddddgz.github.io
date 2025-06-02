@@ -26,27 +26,39 @@
             #line:hover {
                 border-left: 3px solid #e3a961;
             }
-
+            
             .container {
+                display: flex;
+            }
+
+            .container-left {
                 width: 50%;
-                height: 100%;
+            }
+
+            .container-right {
+                right: 0px;
+                width: 50%;
             }
 
             #main .box {
                 padding: 10px;  /* 文字周围的空白 */
                 position: relative;
-                left: 5%;       /* 左右各留出 5% */
-                width: 90%;     /* 宽度为 .container 的 90% */
+                left: 5%;
+                width: 90%;     /* 宽度为 .container-xxx 的 90% */
                 transition: box-shadow 0.5s;
-                line-height: 10px;
+                margin: 15px 0px;
+            }
+
+            #main .box:hover {
+                box-shadow: 0px 0px 10px #e3a961ff;
+            }
+
+            #main .box p {
+                margin: 5px;
             }
 
             #main .box p:not(.title) {
                 line-height: 20px;
-            }
-
-            #main .box:hover {
-                box-shadow: 0px 0px 10px rgba(227, 169, 97, 0.6);
             }
         </style>
     </head>
@@ -56,34 +68,38 @@
             <h1>网站历史</h1>
             <div id="line"></div>
             <div class="container">
-                <div class="box">
-                    <p class="title">202X/X/X</p>
-                    <p>网站创建又删除了不知道几次……</p>
-                </div><br>
-                <div class="box">
-                    <p class="title">2025/4/13</p>
-                    <p>最新版网站的初次提交，只有一个 index.html。</p>
-                </div><br>
-                <div class="box">
-                    <p class="title">2025/5/2</p>
-                    <p>采用 Bootstyle 样式，加入了“关系测试”页面。</p>
-                </div><br>
-                <div class="box">
-                    <p class="title">2025/5/2</p>
-                    <p>修复了“笔画差为负数”导致 undefined 的 bug。</p>
-                </div><br>
-                <div class="box">
-                    <p class="title">2025/5/22</p>
-                    <p>废除 Bootstyle 样式，采用自定义样式，添加了 404、友情链接等页面，关系测试页面设为“未完工”状态，主页采用 busuanzi 统计访问次数，添加自定义标签 &lt;fcthread&gt; &lt;fcpost&gt;。</p>
-                </div><br>
-                <div class="box">
-                    <p class="title">2025/5/23</p>
-                    <p>将 &lt;fcthread&gt; 更名为 &lt;fcpost&gt;，并增加其链接至具体回复帖子的功能；添加了备案；添加了拼音工具页面；废除 busuanzi，采用 counter12 统计访问次数。</p>
-                </div><br>
-                <div class="box">
-                    <p class="title">这块的显示位置不太对啊，容我花上一些时间改改……</p>
-                    <p></p>
-                </div><br>
+                <div class="container-left">
+                    <div class="box">
+                        <p class="title">202X/X/X</p>
+                        <p>网站创建又删除了不知道几次……</p>
+                    </div>
+                    <div class="box">
+                        <p class="title">2025/4/13</p>
+                        <p>最新版网站的初次提交，只有一个 index.html。</p>
+                    </div>
+                    <div class="box">
+                        <p class="title">2025/5/2</p>
+                        <p>采用 Bootstyle 样式，加入了“关系测试”页面。</p>
+                    </div>
+                    <div class="box">
+                        <p class="title">2025/5/22</p>
+                        <p>废除 Bootstyle 样式，采用自定义样式，添加了 404、友情链接等页面，关系测试页面设为“未完工”状态，主页采用 busuanzi 统计访问次数，添加自定义标签 &lt;fcthread&gt; &lt;fcpost&gt;。</p>
+                    </div>
+                    <div class="box">
+                        <p class="title">2025/5/23</p>
+                        <p>将 &lt;fcthread&gt; 更名为 &lt;fcpost&gt;，并增加其链接至具体回复帖子的功能；添加了备案；添加了拼音工具页面；废除 busuanzi，采用 counter12 统计访问次数。</p>
+                    </div>
+                    <div class="box">
+                        <p class="title">2025/5/25</p>
+                        <p>添加“网站历史”页面；添加脚注功能；微调窗口背景配色；设置选中文本的颜色；添加“作品展示”页面；给“友情链接”页面添加了一个动画。</p>
+                    </div>
+                    <div class="box">
+                        <p class="title">2025/6/2</p>
+                        <p>懒得写了……</p>
+                    </div>
+                </div>
+                <div class="container-right">
+                </div>
             </div>
         </div>
         <div id="icp"></div>

@@ -26,7 +26,8 @@
     <body>
         <div id="navbar"></div>
         <div id="main">
-            <table cellspacing="0">
+            <p>点击复制&nbsp;&nbsp;&nbsp;&nbsp;<checkbox onchange="Switch()"></checkbox>大写</p>
+            <table>
                 <thead>
                     <tr>
                         <th>拼音字母 / 轻声</th>
@@ -100,44 +101,65 @@
                         <td>ň</td>
                         <td>ǹ</td>
                     </tr>
-                    <!-- <tr>
+                    <tr id="z">
                         <td>z</td>
                         <td>z̄</td>
                         <td>ź</td>
                         <td>ž</td>
                         <td>z̀</td>
                     </tr>
-                    <tr>
+                    <tr id="c">
                         <td>c</td>
                         <td>c̄</td>
                         <td>ć</td>
                         <td>č</td>
                         <td>c̀</td>
                     </tr>
-                    <tr>
+                    <tr id="s">
                         <td>s</td>
                         <td>s̄</td>
                         <td>ś</td>
                         <td>š</td>
                         <td>s̀</td>
                     </tr>
-                    <tr>
+                    <tr id="r">
                         <td>r</td>
                         <td>r̄</td>
                         <td>ŕ</td>
                         <td>ř</td>
                         <td>r̀</td>
-                    </tr> -->
+                    </tr>
                 </tbody>
             </table>
+            <p>效果预览：<input type="text" autofocus><button onclick="copy()">复制</button></p>
         </div>
         <div id="icp"></div>
         <script src="main.js"></script>
         <script>
-            $all('td').forEach(element => {
-                element.setAttribute('title', '点击复制');
-                element.onclick = () => navigator.clipboard.writeText(element.innerHTML);
+            $all('td').forEach(element => element.onclick = () => {
+                $('input').value += element.innerHTML
+                $('input').focus();
             });
+            $all('#z,#c,#s,#r').forEach(element => element.style.display = 'none');
+            function Switch() {
+                // 切换大小写
+                $all('td').forEach(element => {
+                    letter = element.innerHTML;
+                    if (letter == letter.toUpperCase()) {
+                        // 转成小写
+                        element.innerHTML = letter.toLowerCase();
+                    } else {
+                        // 转成大写
+                        element.innerHTML = letter.toUpperCase();
+                    }
+                });
+                $('input').focus();
+            }
+            function copy() {
+                // 复制
+                navigator.clipboard.writeText($('input').value);
+                $('input').focus();
+            }
         </script>
     </body>
 </html>

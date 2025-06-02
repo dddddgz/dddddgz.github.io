@@ -7,12 +7,12 @@
         <link rel="stylesheet" href="style.css">
         <style>
             .box {
-                background-color: rgba(224, 224, 224, 0.7);
-                width: 90vw;    /* 宽度：90% 窗口宽度 */
-                height: 60px;   /* 高度：60px */
-                padding: 10px;  /* 边框内留白的宽度：10px */
-                display: flex;  /* 内部组件排列方式：横向 */
-                gap: 20px;      /* 组件间隔：20px */
+                background-color: #e0e0e0b3;
+                width: 90vw;            /* 宽度：90% 窗口宽度 */
+                height: 60px;           /* 高度：60px */
+                padding: 10px;          /* 边框内留白的宽度：10px */
+                display: flex;          /* 内部组件排列方式：横向 */
+                gap: 20px;              /* 组件间隔：20px */
                 cursor: pointer;
                 position: relative;
                 top: 0px;
@@ -20,7 +20,18 @@
             }
             
             .box:hover {
-                top: -5px;
+                top: -10px;
+                background-color: #d0d0d0b3;
+                animation: bgc 0.5s;    /* transition 不能同时设置 top 和 background-color。。。 */
+            }
+            
+            @keyframes bgc {
+                0% {
+                    background-color: #e0e0e0b3;
+                }
+                100% {
+                    background-color: #d0d0d0b3;
+                }
             }
 
             .title {
